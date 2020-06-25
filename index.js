@@ -25,11 +25,14 @@ var lnk=[]
           data.push({
             title: title,
              link: link,
-             author: author,
+             description:{
+              author: author,
              age:age,
              points: parseInt(points),
              comments: comments,
              rank: parseInt(rank)
+             }
+             
           })
           lnk.push({link:link})
             })

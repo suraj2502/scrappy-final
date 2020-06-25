@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test');
 var db=mongoose.connection;
@@ -8,11 +9,13 @@ db.once('open', function() {
 var ListSchema = new mongoose.Schema({
   title: String,
   link: String,
-  author: String,
-  age:String,
-  points: Number,
-  comments: String,
-  rank: Number
+   description:{
+    author: String,
+    age:String,
+    points: Number,
+    comments: String,
+    rank: Number
+  }
  
 });
 module.exports = mongoose.model('List', ListSchema);
